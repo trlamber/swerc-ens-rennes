@@ -2,6 +2,7 @@
 Fiche de pompe pour le SWERC
 
 TODO : 
+- changer l'implem du lazy tree pour qu'il soit sparse
 - écrire ce qu'il y a en-dessous, et ajouter aussi la plupart des algos du kactl.
 - faire le pdf
 
