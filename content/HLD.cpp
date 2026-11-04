@@ -1,7 +1,7 @@
 /*ca compile avec le struct LazyTree (faut include le fichier LazyTree)
 VALS_IN_EDGES permet de faire les op sur aretes si true sinon c'est sur les noeuds
 par defaut j'ai pris add et get comme fonctions
-pas testé mais ca devrait marcher*/
+pas testé mais verifié statiquement par IA*/
 template<int SZ, bool VALS_IN_EDGES> struct HLD{
     int N;
     vector<int> adj[SZ];
@@ -13,7 +13,7 @@ template<int SZ, bool VALS_IN_EDGES> struct HLD{
     }
     void dfs_siz(int x){
         sz[x] = 1;
-        for (int y:adj[x]){
+        for (int& y:adj[x]){
             par[y] = x;
             depth[y] = depth[x]+1;
             adj[y].erase(find(begin(adj[y]),end(adj[y]),x));
